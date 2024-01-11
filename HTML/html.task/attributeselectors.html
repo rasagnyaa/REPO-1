@@ -4,26 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>attributeselector</title>
+    <style>
+
+div{
+border: 1px solid rgb(255, 217, 0);
+height: 300px;
+width: 500px;
+text-align: center;
+margin-left: 500px;
+margin-top: 200px;
+background-color: rgb(255, 217, 0);
+border-radius: 20px;
+box-shadow: 10px 10px 30px ;
+}
+h1{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+label,input{
+
+    margin-top: 20px;
+  
+}
+label[for="fname"]{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+label[for="sname"]{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+label[for="email"]{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+label[for="pswd"]{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+label[for="contactnumber"]{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+label[for]{
+
+    color: black;
+    
+}
+input[target]{
+background-color: aqua;
+color: darkblue;
+}
+input[action]{
+background-color: blueviolet;
+color: chartreuse;
+
+}
+input[method]{
+background-color: brown;
+color: aquamarine;
+}
+
+input[target="_self"]{
+    background-color: palevioletred;
+    color: azure;
+}
+input[target="_blank"]{
+    background-color: red;
+    color: blue;
+}
+
+
+
+
+
+
+    </style>
 </head>
 <body>
-    
+    <h1>Form Using Attribute Selectors</h1>
+    <div>
 <form>
-<input type="type"name="name"
-
-
-
-
-
-
-
-
-
-
+    <label for="fname">FIRSTNAME:</label>
+    <input type="text" id="fname" name="fname" target=""/><br><br>
+    <label for="sname">SECONDNAME:</label>
+    <input type="text" id="sname" name="sname"action=""/><br><br>
+    <label for="email">EMAIL:</label>
+    <input type="text" id="email" name="mail"method=""/><br><br>
+    <label for="pswd">PASSWORD:</label>
+    <input type="password" id="pswd" name="pswd"target="_self"/><br><br>
+    <label for="contactnumber">CONTACT NUMBER:</label>
+    <input type="" id="contactnumber" name="contactnumber"target="_blank"/><br><br>
 
 
 </form>
 
-
+</div>
 
 
 
