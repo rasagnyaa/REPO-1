@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.md{
+height: 10px;
+border: 2px solid black;
+display: inline-block;
+padding: 8px;
+}
+.item{
+border: 2px solid black;
+width: 20px;
+margin-bottom: 4px;
+
+}
+.md:hover{
+
+    background-color: aqua;
+}
+.menu{
+
+    display: none;
+}
+.md:active+.menu{
+display: block;
+
+}
+    </style>
+</head>
+<body>
+    
+
+<div class="md">
+<div class="item"></div>
+<div class="item"></div>
+<div class="item"></div>
+
+</div>
+
+<div class="menu">
+<ul>
+<li>tea</li>
+<li>coffee</li>
+<li>boost</li>
+<li>horlicks</li>
+
+</ul>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
