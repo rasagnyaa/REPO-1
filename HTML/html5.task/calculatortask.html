@@ -2,41 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width, initial-scale=1.0">
+    <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .d3{
-border: 1px solid rgb(152, 236, 251);
-height: 400px;
-width: 403px;
-background-color: rgb(152, 236, 251);
-display: flex;
-column-gap: 5px;
-margin-left: 0px;
-        }
-        .d1{
-          border: 1px solid black;
-          height: 450px;  
-          width: 400px;
-          margin-left: 0px;
-        }
-    .d2{
+    .d1{
+        border: 1px solid rgb(152, 236, 251);
+        height: 450px;  
+        width: 420px;
+        margin-left: 550px;
+        margin-top: 100px;
+        background-color: rgb(152, 236, 251);
+      }
+      .d2{
 border: 1px solid darkgrey;
 height: 50px;
-width: 403px;
+width: 420px;
 background-color: darkgray;
 display:flex;
 column-gap: 5px;
 margin-left: 0px;
 justify-content: flex-end;
 align-items: center;
-  }
+font-size: larger;
+color: white;
 
-  .c1,.c2,.c3,.c4{
+
+ }
+ 
+.d2:hover{
+background-color: gray;
+ }
+ .d3{
+    display: flex;
+    column-gap: 9px;
+
+ }
+ .c1,.c2,.c3,.c4{
     display: flex;
     border: 1px solid darkorange;
     height: 40px;
-    width: 100px;
+    width: 90px;
 border-radius:   200px;
 box-shadow: 5px 5px 5px   ;
 margin-top: 5px;
@@ -44,7 +49,7 @@ justify-content: center;
 align-items: center;
 background-color: darkorange;
 font-size: larger;
-margin-left: 0px;
+margin-left: 5px;
 
   }
 .c1:hover,.c2:hover,.c3:hover,.c4:hover{
@@ -52,31 +57,15 @@ margin-left: 0px;
     background-color: gray
     ;
  }
-  
-  .return{
+ .d4{
     display: flex;
-    margin-top: 10px;
-    color: aliceblue;
-    font-size: larger;
-
-  }
-  .d4{
-    display: flex;
-    margin-top: -350px;
+    margin-top: -10px;
     column-gap: 50px;
     justify-content: center;
     align-items: center;
-    margin-left: -250px;
+    margin-left: 0px;
    
   }
-.d5{
-    display: flex;
-    margin-top: 10px;
-    column-gap: 50px;
-    justify-content: center;
-    align-items: center;
-    margin-left: -250px; 
-}
   .c5,.c6,.c7,.c8{
     display: flex;
     border: 1px solid darkblue;
@@ -99,29 +88,36 @@ justify-content: center;
     border: 1px solid gray;
 background-color: gray;
  }
- .c9,.c10,.c11,.c12{
+ .d5{
+    display: flex;
+    margin-top: 10px;
+    column-gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+   
+  }
+  .c9,.c10,.c11,.c12{
     display: flex;
     border: 1px solid darkblue;
     height: 40px;
     width: 50px;
 border-radius:   300px;
-box-shadow: 5px 5px 5px  ;
+box-shadow: 5px 5px 5px   ;
 margin-top: 45px;
 background-color: darkblue;
 font-size: larger;
-justify-content: center; 
-     align-items: center; 
-    margin-left: 10px;
+justify-content: center;
+    align-items: center;
+    
  }
  .c12{
-    background-color: darkorange;
     border: 1px solid darkorange;
-
+    background-color: darkorange;
  }
  .c9:hover,.c10:hover,.c11:hover,.c12:hover{
-    
+    border: 1px solid gray;
 background-color: gray;
-border: 1px solid gray;
  }
  .d6{
     display: flex;
@@ -129,16 +125,16 @@ border: 1px solid gray;
     column-gap: 50px;
     justify-content: center;
     align-items: center;
-    margin-left: -250px; 
-
- }
- .c13,.c14,.c15,.c16{
+    margin-left: 0px;
+   
+  }
+  .c13,.c14,.c15,.c16{
     display: flex;
     border: 1px solid darkblue;
     height: 40px;
     width: 50px;
 border-radius:   300px;
-box-shadow: 5px 5px 5px  ;
+box-shadow: 5px 5px 5px   ;
 margin-top: 45px;
 background-color: darkblue;
 font-size: larger;
@@ -147,66 +143,83 @@ justify-content: center;
     
  }
  .c16{
-    background-color: darkorange;
     border: 1px solid darkorange;
-
+    background-color: darkorange;
  }
  .c13:hover,.c14:hover,.c15:hover,.c16:hover{
-    
+    border: 1px solid gray;
 background-color: gray;
-border: 1px solid gray;
  }
-</style>
+ h1{
+    color: aqua;
+    background-color: black;
+    width: 150px;
+text-align: center;
+margin-left: 700px;
+border-radius: 20px;
+ }
+ h1:hover{
+    background-color: blueviolet;
+    color: aliceblue;
+ }
+ h1:active{
+    color: black;
+ }
+      </style>
 </head>
 <body>
-    
-  <div class="d1">
-    
-<div class="d2">
-    <div class="return">1234</div>
-</div>
-<div class="d3">
- <div class="c1">Ac</div> 
-<div class="c2">+/-</div>
-<div class="c3">%</div>
-<div class="c4">/</div>
- </div> 
-<div class="d4">
+    <h1>Calculater</h1>
+    <div class="d1">
 
+<div class="d2">1234|</div>
+
+<div class="d3">
+    <div class="c1">Ac</div> 
+    <div class="c2">+/-</div>
+    <div class="c3">%</div>
+    <div class="c4">/</div>
+</div>
+
+<div class="d4">
     <div class="c5">7</div> 
     <div class="c6">8</div>
     <div class="c7">9</div>
     <div class="c8">*</div>
-
 </div>
 
-<div class="d5">
 
+<div class="d5">
     <div class="c9">4</div> 
     <div class="c10">5</div>
     <div class="c11">6</div>
     <div class="c12">-</div>
-
-
-
 </div>
 
-
 <div class="d6">
-
-    <div class="c13">1</div> 
+    <div class="c13">3</div> 
     <div class="c14">2</div>
-    <div class="c15">3</div>
+    <div class="c15">1</div>
     <div class="c16">+</div>
 
 
-
 </div>
 
 
 
 
 
-  </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
 </body>
 </html>
+
+
