@@ -16,39 +16,69 @@ margin-top: -10px;}
     
      object-fit: contain;
 }
-li{
-    display: inline-block;
-    
-    
+ul{
+    display: flex;
+    position: absolute;
     z-index: 6;
+    list-style-type: none;
+    gap: 30px;
+    margin-top: -700px;
+    margin-left: 700px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     
 }
-.li1{
-margin-top: -300px;
-position: absolute;
-z-index: 6;
-margin-left: 950px;
-margin-top: -700px;
-color: white;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+a{
+    color: aliceblue;
+    text-decoration: none;
+    
 }
-.li2{
-    margin-top: -300px;
-position: absolute;
-z-index: 6;
-margin-left: 1100px;
-margin-top: -700px;
-color: white;
-font-family: Verdana, Geneva, Tahoma, sans-serif;  
+.caption{
+ position: absolute;   
+ }
+.f1{
+    position: absolute;
+    font-style: italic;
+    margin-top: -500px;
+    margin-left: 600px;
+    color: white;
 }
-.li3{
-    margin-top: -300px;
-position: absolute;
-z-index: 6;
-margin-left: 1200px;
-margin-top: -700px;
-color: white;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+.f2{
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: -450px;
+    margin-left: 490px;
+    color: white;
+}
+
+
+
+.p1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+     margin-left: 500px;
+     margin-top: 0px;
+     font-size: larger;
+}
+.img2{
+    margin-left: -5px;
+    margin-top: 20px;
+}
+.p2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    margin-left: 20%;
+    font-weight: lighter;
+}   
+#city{
+margin-left: 500px;
+    width: 300px;
+    height: 50px;
+    font-size: larger;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+border-radius: 5px;
+box-shadow: 5px 5px 5px 5px rgb(174, 172, 172);
 }
     </style>
 </head>
@@ -56,15 +86,81 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 <div class="d1">
 <img class="img1" src="../images/z1.png">
-<nav>
+<div class="nav-bar">
     <ul>
-        <li class="li1"><a href="">Add resturant&nbsp;&nbsp;</a></li>
-        <li class="li2">Log in</li>
-        <li class="li3">Sign Up</li>
+        <li><a href="../html5.task/addrest.html">Add resturant</a></li>
+        <li><a href="../html5.task/loginz.html">Log in</a></li>
+        <li><a href="../html5.task/zomatosignup.html">Sign Up</a></li>
     </ul>
-</nav>
+</div>
 
-<a href=""
+<div class="caption">
+  
+  
+    <h1 class="f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zomato</h1>
+</div>
+<div class="caption1">
+    <h3 class="f2">Find the best resturants, cafes and bars in India</h3>
+    </div>
+    <div class="caption3">
+    <p class="p1">Popular locations in <img class="img2" src="../images/flaggg.png"height="20px"width="30px" style="border-radius: 5px;">India </p>
+   
+</div>
+    <p class="p2"> From swanky of upscale restaurants to the cosiest hidden gems serving the most incredible food,<br><br>&nbsp;    Zomato covers at all. Explore menus and millions of restaurant photos and reviews from users<br><br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   just like you, to find your next great meal.</p>
+    
+    
+    <div class="countries">
+
+
+        <input list="cities" id="city" placeholder="Hyderabad Restaurants"/>
+        <datalist id="cities">
+        <option value="Alibag"></option>
+        <option value="Ambernath"></option>
+        <option value="Badlapur"></option>
+        <option value="Bhiwandi-Nizampur"></option>
+        <option value="Kalyan-Dombivil"></option>
+        <option value="Karjat"></option>
+        <option value="Khopoli"></option>
+        <option value="Matheran"></option>
+        <option value="Mira-Bhayandar"></option>
+        <option value="Mumbai"></option>
+        <option value="Navi Mumbai"></option>
+        <option value="Palghar"></option>
+        <option value="Pen"></option>
+        <option value="Thane"></option>
+        <option value="Ulhasnagar"></option>
+        <option value="Uran"></option>
+        <option value="Vasai-virar"></option>
+        
+        </datalist>
+        
+
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
 
 
 
