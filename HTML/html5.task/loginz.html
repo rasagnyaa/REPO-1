@@ -100,6 +100,39 @@ font-size: large;
     margin-top: 170px;
     position: absolute;
 }
+.button{
+
+width: 400px;
+height: 50px;
+border: 1px solid gray;
+background-color: gray;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: 50px;
+margin-top: 30px;
+color: white;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+border: 1px solid gray;
+border-radius: 5px;
+}
+
+
+input:checked~.button{
+  background-color: rgb(255, 71, 111);  
+border: 1px solid rgb(255, 71, 111);
+transition-duration: 1s;
+}
+.t1{
+  margin-top: -49px;  
+  position: absolute;
+  margin-left: 35px;
+}
+a[target=_self]{
+    font-size: large;
+    text-decoration: none;
+    color: white;
+}
     </style>
 </head>
 <body>
@@ -111,11 +144,12 @@ font-size: large;
 <h1>Login</h1>
 
     <input list="phones" class="c1" id="phone"placeholder="phone"  required/><br>
-        <button class="b1" style="font-size:105x;background-color: rgb(215, 68, 105);
-        color: white;
-        border:1px solid  rgb(215, 68, 105);
-        text-align: center;
-        border-radius: 10px;">Send One Time password <i class="fa fa-send-o"></i></button>
+    <input type="checkbox" class="t1">
+    
+    <div class="button">
+      <a href="../html5.task/projecttask.html" target="_self" > Send otp</a>
+         
+        </div>   
 
 <h1 class="p1">or</h1>
 
