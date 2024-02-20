@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function sumOfOddDigits(number) {
+        let sum = 0;
+        while (number > 0) {
+          let digit = number % 10;
+          if (digit % 2 !== 0) {
+            sum += digit;
+          }
+          number = Math.floor(number / 10);
+        }
+        return sum;
+      }
+      
+      // Example usage:
+      let number = 434343;
+      console.log("Sum of odd digits:", sumOfOddDigits(number));
+
+
+ 
+      function differenceEvenOddSum(num) {
+        let evenSum = 0;
+        let oddSum = 0;
+        
+        while (num > 0) {
+          let digit = num % 10;
+          
+          if (digit % 2 === 0) {
+            evenSum += digit;
+          } else {
+            oddSum += digit;
+          }
+          
+          num = Math.floor(num / 10);
+        }
+        
+        return evenSum - oddSum;
+      }
+      
+      // Example usage:
+      let num = 76321;
+      console.log("Difference between even sum and odd sum:", differenceEvenOddSum(num));
+    //   
+    function sumOfDigitsInEvenPositions(numberr) {
+  let sum = 0;
+  let strNumber = numberr.toString();
+
+  for (let i = 1; i < strNumber.length; i += 2) {
+    sum += parseInt(strNumber[i]);
+  }
+
+  return sum;
+}
+
+// Example usage:
+let numberr = 95313;
+console.log("Sum of digits in even positions:", sumOfDigitsInEvenPositions(numberr));
+        // 
+        function differenceEvenOddPositions(numbers) {
+  let evenSum = 0;
+  let oddSum = 0;
+  let strNumber = numbers.toString();
+
+  for (let i = 0; i < strNumber.length; i++) {
+    if (i % 2 === 0) {
+      evenSum += parseInt(strNumber[i]);
+    } else {
+      oddSum += parseInt(strNumber[i]);
+    }
+  }
+
+  return evenSum - oddSum;
+}
+
+// Example usage:
+let numbers = 95313;
+console.log("Difference between even position sum and odd position sum:", differenceEvenOddPositions(numbers));  
+   </script> 
+</body>
+</html>
