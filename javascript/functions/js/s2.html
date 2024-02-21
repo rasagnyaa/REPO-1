@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="box">rasagnya</h1>
+    <h1 class="box">chandhana</h1>
+    <h1 class="box">sanjana</h1>
+    <script>
+// let divs=document.querySelectorAll(".box");
+// divs[0].innerText="rasagnya 1";
+// divs[1].innerText="rasagnya 1";
+// divs[2].innerText="rasagnya 1";
+// //////////////////////OR/////////////////////////////
+let divs=document.querySelectorAll(".box");
+let idx=1;
+for(let div of divs){
+
+    div.innerText=`rasagnya ${idx}`;
+    idx++;
+}
+
+console.log(divs);
+
+
+
+
+    </script>
+</body>
+</html>
