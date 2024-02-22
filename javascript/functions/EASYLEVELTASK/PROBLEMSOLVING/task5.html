@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>;
+let sum = 0;
+
+for (let num = 10; num < 50; num++){
+let isPrime = true;
+if (num % 10 === 7){
+for (let i = 2; i <= Math.sqrt(num); i++) {
+            if(num % i === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            sum += num;
+        }
+    }
+}
+
+console.log("The sum of all prime numbers that end with 7 in the range(1, 50) is:", sum);
+
+
+   </script> 
+</body>
+</html>
