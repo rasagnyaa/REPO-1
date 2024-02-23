@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function isPrime(num) {
+    if (num < 2) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+}
+
+function sumOfPrimeDigits(number) {
+    let total = 0;
+    for (let digit of number.toString()) {
+        if (isPrime(parseInt(digit))) {
+            total += parseInt(digit);
+        }
+    }
+    return total;
+}
+
+const numberr = 46732;
+const result = sumOfPrimeDigits(numberr);
+console.log(result);
+
+
+//////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////
+function isPrime(n) {
+    if (n <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) return false;
+    }
+    return true;
+}
+
+function primeDigitsInDescOrder(num) {
+    const digits = String(num).split('').map(Number);
+    const primeDigits = digits.filter(isPrime).sort((a, b) => b - a);
+    return parseInt(primeDigits.join(''));
+}
+
+const numberrr = 46732;
+const primeDigitsDescOrder = primeDigitsInDescOrder(numberrr);
+console.log("Prime digits in des order=", primeDigitsDescOrder);
+///////////////////
+function sortDigitsAscending(number) {
+    // Convert number to string to manipulate digits
+    let numStr = number.toString();
+    
+    // Filter out prime digits
+    let primeDigits = numStr.split('').filter(digit => {
+        let num = parseInt(digit);
+        return num === 2 || num === 3 || num === 5 || num === 7;
+    });
+    
+    // Sort prime digits in ascending order
+    primeDigits.sort((a, b) => a - b);
+    
+    // Join the sorted prime digits back into a string
+    let sortedDigits = primeDigits.join('');
+    
+    return sortedDigits;
+}
+
+let number = 46732;
+let sortedPrimeDigits = sortDigitsAscending(number);
+console.log("The asc order of prime numbers are=",sortedPrimeDigits); // Output: "237"
+
+/////////////////////////////////
+
+
+    
+function findLargestDigit(numberR) {
+    // Convert number to string to manipulate digits
+    let numStr = numberR.toString();
+    
+    // Convert string to array of digits
+    let digitsArray = numStr.split('').map(Number);
+    
+    // Find the largest digit
+    let largestDigit = Math.max(...digitsArray);
+    
+    return largestDigit;
+}
+
+// Test the function
+let numberR = 1754;
+let largestDigit = findLargestDigit(numberR);
+console.log("The largest digit in", 1754, "is:", largestDigit);
+
+
+
+
+
+    </script>
+</body>
+</html>
