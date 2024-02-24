@@ -14,13 +14,14 @@
       }
       #sig{
 height: 50px;
-width: 50px;
-
-
+width: 150px;
+margin-left: 120px;
+margin-top: -120px;
       }
     </style>
 </head>
 <body>
+  
   <script>
 var nme=document.createElement("h1");
 console.log(nme);
@@ -135,15 +136,23 @@ document.body.appendChild(divcr)
 var names=document.createElement("h3");
 names.innerText="Name : k.Rasagnya"
 names.style.marginTop="50px"
+names.style.fontFamily="Verdana, Geneva, Tahoma, sans-serif;"
 console.log(names);
 document.body.appendChild(names);
 var   date=document.createElement("h3");
 date.innerText="Date : 20/02/24"
 date.style.marginTop="0px"
+date.style.fontFamily="Verdana, Geneva, Tahoma, sans-serif;"
 console.log(date);
 document.body.appendChild(date);
+var   signature=document.createElement("h3");
+signature.innerText="signature :"
+signature.style.marginTop="0px"
+signature.style.fontFamily="Verdana, Geneva, Tahoma, sans-serif;"
+console.log(signature);
+document.body.appendChild(signature);
 var   imggg=document.createElement("img");
-imggg.setAttribute("src","./images/rassu.jpg")
+imggg.setAttribute("src","../TASKKKKKKKK/images/rassu sign.jpg")
 imggg.setAttribute("id","sig")
 console.log(imggg);
 document.body.appendChild(imggg);
