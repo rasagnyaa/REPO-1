@@ -6,44 +6,29 @@
     <title>Document</title>
 </head>
 <style>
-#img1{
-    height: 200px;
-    width: 200px;
-position: absolute;
-margin-left: -350px;
-margin-top: 250px;
 
-}
 .class1{
 height: 200px;
 width: 200px;
-
 display: inline-block;
 margin-left: 200px;
 margin-top: 200px;
 border-radius: 2rem;
 box-shadow:10px 10px 10px 10px rgba(136, 110, 110, 0.105);;
 border:1px solid rgba(136, 110, 110, 0.105);
+
+
 } 
 
-#img2,#img3{
+#img{
     height: 200px;
     width: 200px;
 position: absolute;
 margin-left: -350px;
-margin-top: 250px;
+margin-top: 300px;
 
 }
-.class2,.class3{
-height: 200px;
-width: 200px;
-display: inline-block;
-margin-left: 200px;
-margin-top: 200px;
-border-radius: 2rem;
-box-shadow:10px 10px 10px 10px rgba(136, 110, 110, 0.105);;
-border:1px solid rgba(136, 110, 110, 0.105);
-} 
+
 
 </style>
 <body>
@@ -291,44 +276,25 @@ border:1px solid rgba(136, 110, 110, 0.105);
             }
         ]
 
+for(i=0;i<=19;i++){
+ let div=document.createElement("div");
+div.setAttribute("class","class1");
+div.innerText=data[i].title
 
- let div1=document.createElement("div");
+document.body.appendChild(div);
+ div.style.height="500px"
+ div.style.width="500px"
 
-div1.setAttribute("class","class1")
+ div.style.fontSize="25px"
 
-document.body.appendChild(div1);
-div1.innerText=data[0].title
- div1.style.height="500px"
- div1.style.width="500px"
-let img1=document.createElement("img");
+let img=document.createElement("img");
 
-img1.setAttribute("src",data[0].image);
-img1.setAttribute("id","img1");
-document.body.appendChild(img1);
-
+img.setAttribute("src",data[i].image);
+img.setAttribute("id","img");
+document.body.appendChild(img);
+}
 //////////////////////////////
-let div2=document.createElement("div");
-div1.innerText=data[0].title
-div2.setAttribute("class","class2")
-document.body.appendChild(div2);
- div2.style.height="500px"
- div2.style.width="500px"
-let img2=document.createElement("img");
 
-img2.setAttribute("src",data[1].image);
-img2.setAttribute("id","img2");
-document.body.appendChild(img2);
-////////////////////////
-let div3=document.createElement("div");
-div3.setAttribute("class","class3")
-document.body.appendChild(div3);
- div3.style.height="500px"
- div3.style.width="500px"
-let img3=document.createElement("img");
-
-img3.setAttribute("src",data[2].image);
-img3.setAttribute("id","img3");
-document.body.appendChild(img3);
     </script>
 </body>
 </html>   
