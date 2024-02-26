@@ -10,7 +10,7 @@
 .class1{
 height: 200px;
 width: 200px;
-display: inline-block;
+
 margin-left: 200px;
 margin-top: 200px;
 border-radius: 2rem;
@@ -20,15 +20,18 @@ border:1px solid rgba(136, 110, 110, 0.105);
 
 } 
 
+
+
+
+
+
 #img{
     height: 200px;
     width: 200px;
 position: absolute;
-margin-left: -350px;
-margin-top: 300px;
-
+margin-top: -360px;
+margin-left: 350px;
 }
-
 
 </style>
 <body>
@@ -276,9 +279,10 @@ margin-top: 300px;
             }
         ]
 
-for(i=0;i<=19;i++){
+for(i=0;i<=20;i++){
  let div=document.createElement("div");
 div.setAttribute("class","class1");
+
 div.innerText=data[i].title
 
 document.body.appendChild(div);
@@ -292,7 +296,12 @@ let img=document.createElement("img");
 img.setAttribute("src",data[i].image);
 img.setAttribute("id","img");
 document.body.appendChild(img);
+
+
+
 }
+
+
 //////////////////////////////
 
     </script>
