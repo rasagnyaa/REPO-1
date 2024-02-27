@@ -6,37 +6,48 @@
     <title>Document</title>
 </head>
 <style>
+.class1:hover{
 
-.class1{
-height: 200px;
-width: 200px;
+transform: scale(1.2);
 
-margin-left: 200px;
-margin-top: 200px;
-border-radius: 2rem;
-box-shadow:10px 10px 10px 10px rgba(136, 110, 110, 0.105);;
-border:1px solid rgba(136, 110, 110, 0.105);
-
-
-} 
-
-
-
-
-
-
-#img{
-    height: 200px;
-    width: 200px;
-position: absolute;
-margin-top: -360px;
-margin-left: 350px;
 }
 
+.class2{
+height: 190px;
+width: 400px;
+position: absolute;
+margin-top: 85px;
+margin-left: -290px;
+text-align: center;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+ display: flex;
+display: inline-block;
+border:1px solid white;
+ /* border-radius: 2rem; 
+box-shadow: 10px 10px 10px 2px rgba(69, 66, 66, 0.482); ; */
+  } 
+  .class1{
+   
+height: 500px;
+width: 500px;
+ display: flex;
+display: inline-block;
+border:1px solid rgba(212, 194, 194, 0.482); 
+border-radius: 2rem;
+box-shadow: 10px 10px 10px 2px rgba(69, 66, 66, 0.482); ;
+  } 
+.img1{
+height: 200px;
+width: 200px;
+margin-left: 120px;
+margin-top: 10px;
+
+  } 
+ 
 </style>
 <body>
     <script>
- var data = [
+        var data = [
             {
                 "id": 1,
                 "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -87,7 +98,7 @@ margin-left: 350px;
             },
             {
                 "id": 5,
-                "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+                "title": "John Hardy Women's  Silver Chain Bracelet",
                 "price": 695,
                 "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
                 "category": "jewelery",
@@ -159,7 +170,7 @@ margin-left: 350px;
             },
             {
                 "id": 11,
-                "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+                "title": "Silicon Power 256GB Performance Boost SATA III 2.5",
                 "price": 109,
                 "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
                 "category": "electronics",
@@ -171,7 +182,7 @@ margin-left: 350px;
             },
             {
                 "id": 12,
-                "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
+                "title": "WD 4TB Gaming Drive Works  External Hard Drive",
                 "price": 114,
                 "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
                 "category": "electronics",
@@ -195,7 +206,7 @@ margin-left: 350px;
             },
             {
                 "id": 14,
-                "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
+                "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor ",
                 "price": 999.99,
                 "description": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag",
                 "category": "electronics",
@@ -267,7 +278,7 @@ margin-left: 350px;
             },
             {
                 "id": 20,
-                "title": "DANVOUY Womens T Shirt Casual Cotton Short",
+                "title": "DANVOUY Womens T Shirt ",
                 "price": 12.99,
                 "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
                 "category": "women's clothing",
@@ -278,32 +289,71 @@ margin-left: 350px;
                 }
             }
         ]
+for(i=0;i<=19;i++){
+var div1=document.createElement("div");
+document.body.appendChild(div1);
+div1.setAttribute("class","class1");
+div1.style.marginLeft="150px"
+div1.style.marginTop="200px"
+let img1=document.createElement("img");
+img1.setAttribute("src",data[i].image);
+img1.setAttribute("class","img1");
+div1.appendChild(img1);
+let btn=document.createElement("button");
+btn.setAttribute("class","button1")
+btn.style.backgroundColor="lightblue"
+btn.style.borderRadius="2rem"
+btn.innerText="See more"
+btn.style.fontSize="20px"
+btn.style.border="1px solid lightblue"
+btn.style.height="50px"
+btn.style.width="200px"
+btn.style.marginLeft="150px"
+btn.style.marginTop="200px"
+btn.style.color="white"
 
-for(i=0;i<=20;i++){
- let div=document.createElement("div");
-div.setAttribute("class","class1");
+document.body.appendChild(btn);
+div1.appendChild(btn);
+let div2=document.createElement("div");
+div2.setAttribute("class","class2")
+// div2.style.border="1px solid black"
+div2.innerText=data[i].title
 
-div.innerText=data[i].title
+div2.style.fontSize="20px"
+div1.appendChild(div2);
+let div3=document.createElement("div");
+div3.setAttribute("class","class3")
 
-document.body.appendChild(div);
- div.style.height="500px"
- div.style.width="500px"
+div3.innerText=data[i].price
+div3.style.marginTop="20px"
+div3.style.fontSize="20px"
+div3.style.border="1px solid white"
+div2.appendChild(div3);
+let div4=document.createElement("div");
+div4.setAttribute("class","class3")
 
- div.style.fontSize="25px"
+div4.innerText="₹"
+div4.style.marginTop="-25px"
+div4.style.marginLeft="140px"
+div4.style.border="1px solid white"
+div4.style.width="10px"
+div4.style.fontSize="20px"
 
-let img=document.createElement("img");
-
-img.setAttribute("src",data[i].image);
-img.setAttribute("id","img");
-document.body.appendChild(img);
-
-
-
-}
+div3.appendChild(div4);
+        }
 
 
-//////////////////////////////
+
+
+
+
+
+
+
+
+
+
 
     </script>
 </body>
-</html>   
+</html>
