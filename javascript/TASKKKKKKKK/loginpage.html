@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login page</title>
     <style>
+        .lgp{
+
+position: absolute;
+margin-top: 200px;
+font-size: 40px;
+text-decoration: none;
+margin-left: -300px;
+color: gray;
+border: 1px solid white;
+width: 200px;
+text-align: center;
+background-color: aliceblue;
+border-radius: 1rem;
+}
  .class1{
 display: flex;
 justify-content: center;
@@ -20,6 +34,15 @@ background-color: aqua;
 .button1:hover{
 background-color: gray;
 
+}
+.sgp{
+
+font-size: 40px;
+position: absolute;
+margin-top: 400px;
+margin-left: 250px;
+text-decoration: none;
+color: white;
 }
 .button1{
 height: 50px;
@@ -56,7 +79,7 @@ let inp=document.createElement("input")
 inp.style.height="50px"
 
 inp.style.width="400px"
-inp.style.marginTop="50px"
+inp.style.marginTop="150px"
 inp.style.marginLeft="100px"
 inp.setAttribute("type","text");
 inp.setAttribute("placeholder","User Name")
@@ -78,11 +101,18 @@ inp1.setAttribute("placeholder","Enter password")
 inp1.style.fontSize="30px"
 inp1.style.textAlign="center"
 div2.appendChild(inp1);
+//////////////
+let anchor1=document.createElement("a");
+anchor1.setAttribute("href","../TASKKKKKKKK/loginpage.html")
+anchor1.setAttribute("class","lgp")
+
+anchor1.innerText="log in"
+div2.appendChild(anchor1);
 ///////////////////////////////////
-let btn=document.createElement("button")
-btn.innerText="Log in"
-btn.setAttribute("class","button1")
-div2.appendChild(btn);
+// let btn=document.createElement("button")
+// btn.innerText="Log in"
+// btn.setAttribute("class","button1")
+// div2.appendChild(btn);
 /////////////////
 let para=document.createElement("p");
 para.innerText="Create an Account?"
@@ -90,17 +120,32 @@ para.style.marginLeft="190px"
 para.style.fontSize="30px"
 para.style.color="white"
 para.style.fontWeight="bold"
-para.style.marginTop="90px"
+para.style.marginTop="200px"
 div2.appendChild(para);
 //////////////////////
-let para1=document.createElement("p");
-para1.innerText="Register"
-para1.style.fontWeight="bold"
-para1.style.marginLeft="255px"
-para1.style.fontSize="30px"
-para1.style.color="white"
-para1.style.marginTop="50px"
-div2.appendChild(para1);
+// ght="bold"
+// para1.style.marginLeft="255px"
+// para1.style.fontSize="let para1=document.createElement("p");
+// para1.innerText="Sign Up"
+// para1.style.fontWei30px"
+// para1.style.color="white"
+// para1.style.marginTop="50px"
+// div2.appendChild(para1);
+let heading=document.createElement("h1");
+heading.innerText="Log in"
+heading.style.marginTop="-500px"
+heading.style.marginLeft="240px"
+heading.style.color="black"
+heading.style.fontWeight="lighter"
+heading.style.fontSize="40px"
+div2.appendChild(heading);
+let anchor=document.createElement("a");
+anchor.setAttribute("href","../TASKKKKKKKK/registerpage.html")
+anchor.setAttribute("class","sgp")
+anchor.innerText="Sign up"
+
+
+div2.appendChild(anchor);
     </script>
 </body>
 </html>
