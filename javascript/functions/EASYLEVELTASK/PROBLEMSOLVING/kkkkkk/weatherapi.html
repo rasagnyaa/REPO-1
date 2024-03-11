@@ -1,0 +1,295 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+      * {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-size: cover;
+        background-color: black;
+        /* background:url(./day.png); */
+        background-size: 100% 100vh;
+      }
+      #card {
+        height: 70vh;
+        width: 26%;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        color: white;
+        border-radius: 12px;
+        padding: 15px;
+      }
+      form
+      {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      input{
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        padding: 7px;
+        border-radius: 5px;
+        border: none;
+      }
+      .header
+        {
+          margin-top: 2vh;
+          color: white;
+        }
+        #imgN
+        {
+          height: 18vh;
+        }
+        input{
+          width: 100%;
+          height: 5vh;
+          padding: 20px;
+        }
+        #imgS
+        {
+          position: absolute;
+          height: 3.5vh;
+          top: 15vh;
+          opacity: 0.5;
+          left: 55.5%;
+          display: none;
+        }
+      @media screen and (max-width : 475px) {
+
+        #card
+        {
+            width: 80%;
+            background-size: cover;
+        }
+        .header
+        {
+          margin-top: 2vh;
+        }
+        body
+        {
+          background-color: rgb(43, 43, 75);
+          background-size: 100% 100vh;
+        }
+        #humidity,#date,#wind,#type
+        {
+          font-size: 13px;
+        }
+        #head
+        {
+          font-size: 20px;
+        }
+        .header
+        {
+          font-size: 35px;
+        }
+      }
+      @media screen and (min-width : 476px) and (max-width:1024px)
+      {
+        #card
+        {
+          width: 40%;
+        }
+        #humidity,#date,#wind,#type
+        {
+          font-size: 15px;
+        }
+        #head
+        {
+          font-size: 25px;
+        }
+        .header
+        {
+          font-size: 35px;
+        }
+      }
+      @media screen and (min-width : 1023px){
+
+        .header
+        {
+          font-size: 35px;
+        }
+        #humidity,#date,#wind,#type
+        {
+          font-size: 18px;
+        }
+        #card
+        {
+          width: 27%;
+        }
+        #head
+        {
+          font-size: 28px;
+        }
+        #imgS
+        {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="">
+      <h2 class="header">Weather</h2>
+      <input type="search"  onclick="document.getElementById('imgS').style.display='none'" id="" required placeholder="Search for city">
+      <img id="imgS" src="./magnifying-glass.png" alt="">
+    </form>
+
+    <div id="card">
+      <h2 id="head"></h2>
+      <img id="imgN" src="" alt="">
+      <h2 id="temp1"></h2>
+      <h2 id="type"></h2>
+      <h2 id="date"></h2>
+      <h2 id="humidity"></h2>
+      <h2 id="wind"></h2>
+    </div>
+
+    <script>
+
+        document.forms[0].addEventListener('submit',(e)=>{
+
+            e.preventDefault()
+
+            var city = e.target[0].value
+            
+            let URL =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=bf89bc2cde67abeceea98d4c23a10716`;
+
+      fetch(URL)
+        .then((val) => {
+          return val.json();
+        })
+        .then((data) => {
+          console.log(data);
+
+          var card = document.getElementById("card");
+
+          var head = document.getElementById("head");
+
+          head.innerText =data.name;
+
+
+          var imgN = document.getElementById('imgN')
+
+          if(Math.floor(data.main.temp-273)<15)
+          {
+            imgN.setAttribute('src','./night-snow.png')
+            card.style.background='url("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGV1MDJidGZ4aTJmOGdqdWx6dmx2cHppdnd6YXpkcnNtZ3Y0eXh1ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ggK4TpfK2cfuZcokhj/giphy.gif")'
+          }
+          if(Math.floor(data.main.temp-273)>18)
+          {
+            imgN.setAttribute('src','./weather-app.png')
+             card.style.background = 'url(./day.png)'
+          }
+
+
+          var temp1 = document.getElementById('temp1')
+          temp1.innerText = Math.floor(data.main.temp-273)+' °C';
+          
+
+          var type = document.getElementById("type");
+          type.innerText =data.weather[0].description;
+
+          var date = document.getElementById('date')
+          var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+          var day = new Date().getDay()
+          date.innerText = days[day]
+
+          // var time = new Date().getHours()
+          // if(time>7 && time<7)
+          // {
+          //   // card.style.background = 'url(./day.png)'
+          // }
+          // else
+          // {
+          //   // card.style.background = 'url(./nyt.png)'
+          // }
+
+          // if(screen.width> 1000)
+          // {
+          //   var pressure = document.createElement('h3')
+          //   card.appendChild(pressure)
+          //   pressure.innerText = 'Feels-Like ' +Math.floor( data.main.feels_like -273)+' °C'
+          // }
+
+          // var humidity = document.createElement("h6");
+
+          var humidity = document.getElementById("humidity");
+          humidity.innerText = "Humidity : " + data.main.humidity + ' %';
+
+          var wind = document.getElementById("wind");
+          wind.innerText = "Wind Speed : " + data.wind.speed + " KM/H";
+
+          e.target[0].value = ''
+        });
+
+        })
+
+        var time = new Date().getHours()
+
+          if(time>7 && time<18)
+          {
+            document.body.style.background = 'url(./day.png)'
+          }
+          else
+          {
+            document.body.style.background = 'url(./nyt.png)'
+          } -->
+
+  
+    <!-- </script>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+// var i=3
+// do{
+//     console.log(i)
+//     i++
+// }while(i%2==0);
+
+// for(i=0;i<5;i++){
+//   if(i===3){
+//     continue;
+//   }
+//   console.log(i)
+// }
+// 
+
+function fun(a,b){
+ var c=a+b;
+return c
+
+}
+// fun(1,3)
+console.log(fun(1,3));
+  </script>
+</body>
+</html>
